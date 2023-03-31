@@ -9,9 +9,8 @@ import GenerateButton from './GenerateButton'
 
 function Body({ meal, setMeal }: any) {
   let ingredients: string[] = []
-  const sortIngredients = (m: string[]) => {
+  const sortIngredients = (m: { [x: string]: string }) => {
     for (let index: number = 1; index <= 20; index++) {
-      console.log(m)
       if (m[`strIngredient${index}`]) {
         ingredients.push(
           m[`strIngredient${index}`] + ':' + m[`strMeasure${index}`]
